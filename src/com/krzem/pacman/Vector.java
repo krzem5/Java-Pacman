@@ -15,14 +15,15 @@ public class Vector{
 
 
 
-	public Vector clone(){
-		return new Vector(this.x,this.y);
+	public Vector add(int x,int y){
+		return new Vector(this.x+x,this.y+y);
 	}
 
 
 
-	public Vector add(int x,int y){
-		return new Vector(this.x+x,this.y+y);
+	@Override
+	public Vector clone(){
+		return new Vector(this.x,this.y);
 	}
 
 

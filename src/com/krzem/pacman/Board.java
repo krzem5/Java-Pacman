@@ -124,55 +124,12 @@ public class Board extends Constants{
 
 
 	private void _gen_b(int[] wl){
-		// https://stanford.edu/~cpiech/cs221/homework/prog/pacman/pacman.html
-
-		// %%%%%%%%%%%%%%%%%%%%
-		// %o...%........%....%
-		// %.%%.%.%%%%%%.%.%%.%
-		// %.%..............%.%
-		// %.%.%%.%%  %%.%%.%.%
-		// %......%G  G%......%
-		// %.%.%%.%%%%%%.%%.%.%
-		// %.%..............%.%
-		// %.%%.%.%%%%%%.%.%%.%
-		// %....%...P....%...o%
-		// %%%%%%%%%%%%%%%%%%%%
-
-		// %%%%%%%%%%%%%%%%%%%%%%%%%%%%
-		// %............%%............%
-		// %.%%%%.%%%%%.%%.%%%%%.%%%%.%
-		// %o%%%%.%%%%%.%%.%%%%%.%%%%o%
-		// %.%%%%.%%%%%.%%.%%%%%.%%%%.%
-		// %..........................%
-		// %.%%%%.%%.%%%%%%%%.%%.%%%%.%
-		// %.%%%%.%%.%%%%%%%%.%%.%%%%.%
-		// %......%%....%%....%%......%
-		// %%%%%%.%%%%% %% %%%%%.%%%%%%
-		// %%%%%%.%%%%% %% %%%%%.%%%%%%
-		// %%%%%%.%            %.%%%%%%
-		// %%%%%%.% %%%%  %%%% %.%%%%%%
-		// %     .  %G  GG  G%  .     %
-		// %%%%%%.% %%%%%%%%%% %.%%%%%%
-		// %%%%%%.%            %.%%%%%%
-		// %%%%%%.% %%%%%%%%%% %.%%%%%%
-		// %............%%............%
-		// %.%%%%.%%%%%.%%.%%%%%.%%%%.%
-		// %.%%%%.%%%%%.%%.%%%%%.%%%%.%
-		// %o..%%.......  .......%%..o%
-		// %%%.%%.%%.%%%%%%%%.%%.%%.%%%
-		// %%%.%%.%%.%%%%%%%%.%%.%%.%%%
-		// %......%%....%%....%%......%
-		// %.%%%%%%%%%%.%%.%%%%%%%%%%.%
-		// %.............P............%
-		// %%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 		this._set(wl,5,0,2);
 		this._set(wl,5,1,0,2);
 		this._set(wl,5,2,0);
 		this._set(wl,5,10,0);
 		this._set(wl,5,9,0,2);
 		this._set(wl,5,8,2);
-
 		this._set(wl,2,2,1,2);
 		this._set(wl,3,2,3);
 		this._set(wl,2,3,0,2);
@@ -181,19 +138,16 @@ public class Board extends Constants{
 		this._set(wl,3,8,3);
 		this._set(wl,2,7,0,2);
 		this._set(wl,2,6,2);
-
 		this._set(wl,4,4,1);
 		this._set(wl,5,4,3);
 		this._set(wl,4,6,1);
 		this._set(wl,5,6,3);
-
 		this._set(wl,7,2,1);
 		this._set(wl,8,2,1,3);
 		this._set(wl,9,2,1,3);
 		this._set(wl,7,8,1);
 		this._set(wl,8,8,1,3);
 		this._set(wl,9,8,1,3);
-
 		this._set(wl,7,4,1,2);
 		this._set(wl,8,4,1,3);
 		this._set(wl,9,4,3);
@@ -201,16 +155,12 @@ public class Board extends Constants{
 		this._set(wl,7,6,0,1);
 		this._set(wl,8,6,1,3);
 		this._set(wl,9,6,1,3);
-
-
-
 		this._set(wl,14,0,2);
 		this._set(wl,14,1,0,2);
 		this._set(wl,14,2,0);
 		this._set(wl,14,10,0);
 		this._set(wl,14,9,0,2);
 		this._set(wl,14,8,2);
-
 		this._set(wl,17,2,2,3);
 		this._set(wl,16,2,1);
 		this._set(wl,17,3,0,2);
@@ -219,19 +169,16 @@ public class Board extends Constants{
 		this._set(wl,16,8,1);
 		this._set(wl,17,7,0,2);
 		this._set(wl,17,6,2);
-
 		this._set(wl,15,4,3);
 		this._set(wl,14,4,1);
 		this._set(wl,15,6,3);
 		this._set(wl,14,6,1);
-
 		this._set(wl,12,2,3);
 		this._set(wl,11,2,1,3);
 		this._set(wl,10,2,1,3);
 		this._set(wl,12,8,3);
 		this._set(wl,11,8,1,3);
 		this._set(wl,10,8,1,3);
-
 		this._set(wl,12,4,2,3);
 		this._set(wl,11,4,1,3);
 		this._set(wl,10,4,1);
@@ -239,7 +186,6 @@ public class Board extends Constants{
 		this._set(wl,12,6,0,3);
 		this._set(wl,11,6,1,3);
 		this._set(wl,10,6,1,3);
-
 		this._set(wl,9,9,5);
 		this._set(wl,8,5,6);
 		this._set(wl,11,5,6);
@@ -261,7 +207,7 @@ public class Board extends Constants{
 	private void _set(int[] wl,int x,int y,int... vl){
 		int tv=0;
 		for (int v:vl){
-			tv+=Math.pow(2,v);
+			tv+=1<<v;
 		}
 		wl[y*BOARD_WIDTH+x]+=tv;
 	}
