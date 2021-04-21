@@ -103,6 +103,7 @@ public class Main extends Constants{
 			}
 		});
 		this.canvas.addMouseMotionListener(new MouseMotionAdapter(){
+			@Override
 			public void mouseMoved(MouseEvent e){
 				cls._mouseM=e;
 			}
